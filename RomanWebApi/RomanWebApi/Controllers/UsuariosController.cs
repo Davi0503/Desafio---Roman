@@ -7,6 +7,7 @@ using RomanWebApi.Interfaces;
 using RomanWebApi.Models;
 using RomanWebApi.Repositorios;
 using RomanWebApi.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RomanWebApi.Controllers
 {
@@ -21,6 +22,7 @@ namespace RomanWebApi.Controllers
             Repositorio = new UsuariosRepository();
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpGet("listar")]
         public IActionResult Listar() {
             try {
@@ -30,6 +32,7 @@ namespace RomanWebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("listar/{tipo}")]
         public IActionResult Listar(string tipo) {
             try {

@@ -1,21 +1,21 @@
-﻿using System;
-using System.Linq;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RomanWebApi.Interfaces;
 using RomanWebApi.Models;
 using RomanWebApi.Repositorios;
+using System;
 
 namespace RomanWebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
-    public class ProjetosController : ControllerBase {
-        private readonly IProjetosRepository Repositorio;
+    public class TemasController : ControllerBase
+    {
+        private readonly ITemasRepository Repositorio;
 
-        public ProjetosController() {
-            Repositorio = new ProjetosRepository();
+        public TemasController() {
+            Repositorio = new TemasRepository();
         }
 
         [Authorize]
@@ -40,10 +40,10 @@ namespace RomanWebApi.Controllers
 
         [Authorize]
         [HttpPost("cadastrar")]
-        public IActionResult Cadastrar(Projetos projeto) {
+        public IActionResult Cadastrar(Temas tema) {
             try {
-                Repositorio.Cadastrar(projeto);
-                return Ok(new {Sucesso = "Projeto cadastrado com sucesso"});
+                Repositorio.Cadastrar(tema);
+                return Ok(new { Sucesso = "Tema cadastrado com sucesso" });
             } catch (Exception exc) {
                 return BadRequest(new { erro = exc.Message });
             }
@@ -51,10 +51,10 @@ namespace RomanWebApi.Controllers
 
         [Authorize]
         [HttpPut("alterar")]
-        public IActionResult Alterar(Projetos projeto) {
+        public IActionResult Alterar(Temas tema) {
             try {
-                Repositorio.Alterar(projeto);
-                return Ok(new { Sucesso = "Projeto alterado com sucesso" });
+                Repositorio.Alterar(tema);
+                return Ok(new { Sucesso = "Tema alterado com sucesso" });
             } catch (Exception exc) {
                 return BadRequest(new { erro = exc.Message });
             }

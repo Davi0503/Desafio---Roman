@@ -15,6 +15,7 @@ namespace RomanWebApi.Repositorios {
         public void Alterar(Temas tema) {
             using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
                 romanContext.Temas.Update(tema);
+                romanContext.SaveChanges();
             }
         }
 
@@ -25,6 +26,7 @@ namespace RomanWebApi.Repositorios {
         public void Cadastrar(Temas tema) {
             using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
                 romanContext.Temas.Add(tema);
+                romanContext.SaveChanges();
             }
         }
 
@@ -35,6 +37,16 @@ namespace RomanWebApi.Repositorios {
         public List<Temas> Listar(){
             using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
                 return romanContext.Temas.ToList();
+            }
+        }
+
+        /// <summary>
+        /// Lista todos os Temas ativos do banco de dados
+        /// </summary>
+        /// <returns>Retorna uma lista com todos os temas que estão ativos do banco de dados</returns>
+        public List<Temas> ListarAtivos() {
+            using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
+                return romanContext.Temas.Where(a => a.Ativo).ToList();
             }
         }
     }

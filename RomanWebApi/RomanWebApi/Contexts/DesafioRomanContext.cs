@@ -23,7 +23,8 @@ namespace RomanWebApi
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(
-                    "Data Source = .\\SQLEXPRESS; Initial Catalog = TIPOFRONT_PROJETO_ROMAN; user id = sa ; pwd = 132"
+                    //"Data Source = .\\SQLEXPRESS; Initial Catalog = TIPOFRONT_PROJETO_ROMAN; user id = sa ; pwd = 132"
+                    "Data Source = .\\NOVOSERVIDOR; Initial Catalog = TIPOFRONT_PROJETO_ROMAN; Integrated Security = true"
                 );
             }
         }

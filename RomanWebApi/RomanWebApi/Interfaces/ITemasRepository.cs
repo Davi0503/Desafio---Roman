@@ -7,6 +7,7 @@ namespace RomanWebApi.Interfaces {
     /// </summary>
     public interface ITemasRepository {
         List<Temas> Listar();
+        List<Temas> ListarAtivos();
         void Cadastrar(Temas tema);
         void Alterar(Temas tema);
     }
