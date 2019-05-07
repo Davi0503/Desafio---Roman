@@ -35,7 +35,7 @@ Este são os requisitos minimos para rodar a aplicação
 ## Banco de dados  
 O banco de dados deve ser a primeira coisa a ser criada.  
 ### Criação
-A primeira coisa a se fazer para que a aplicação funcione é a criação de um banco de dados (os arquivos podem ser encontrados [aqui](#)).  
+A primeira coisa a se fazer para que a aplicação funcione é a criação de um banco de dados (os arquivos podem ser encontrados [aqui](https://github.com/Davi0503/Senai-Roman-Desafio-TipoFront/blob/master/banco%20de%20dados/DB_Cria%C3%A7%C3%A3o.sql)).  
 Selecione os 2 primeiros comandos (Criar e usar o banco de dados) e os execute (**F5**) .
 Depois disso, selecione todos os outros e execute-os tambem.  
 ### Valores iniciais  
