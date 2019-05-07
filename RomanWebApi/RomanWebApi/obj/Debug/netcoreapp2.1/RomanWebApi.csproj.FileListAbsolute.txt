@@ -1,0 +1,14 @@
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\bin\Debug\netcoreapp2.1\RomanWebApi.deps.json
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\bin\Debug\netcoreapp2.1\RomanWebApi.runtimeconfig.json
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\bin\Debug\netcoreapp2.1\RomanWebApi.runtimeconfig.dev.json
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\bin\Debug\netcoreapp2.1\RomanWebApi.dll
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.csprojAssemblyReference.cache
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.csproj.CoreCompileInputs.cache
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.RazorAssemblyInfo.cache
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.RazorAssemblyInfo.cs
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.AssemblyInfoInputs.cache
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.AssemblyInfo.cs
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.RazorTargetAssemblyInfo.cache
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\bin\Debug\netcoreapp2.1\RomanWebApi.pdb
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.dll
+C:\Users\47326175810\Desktop\Sprint 5\Senai-Roman-Desafio-TipoFront\RomanWebApi\RomanWebApi\obj\Debug\netcoreapp2.1\RomanWebApi.pdb
