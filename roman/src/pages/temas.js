@@ -1,9 +1,9 @@
-import React, {Component} from "react"
-import {View, Text, StyleSheet} from 'react-native'
+import React, { Component } from "react"
+import { View, Text, StyleSheet } from 'react-native'
 
-class Temas extends Component{
-    render(){
-        return(
+class Temas extends Component {
+    render() {
+        return (
             <View>
                 <Text>
                     Temas
