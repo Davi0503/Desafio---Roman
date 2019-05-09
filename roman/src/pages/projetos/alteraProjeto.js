@@ -16,7 +16,8 @@ class Projeto extends Component{
         super(props);
         this.state = {
             id: 0,
-            senha: ""
+            senha: "",
+            tema : ""
         };
     }
 
@@ -42,7 +43,7 @@ class Projeto extends Component{
                                     selectedValue={this.state.language}
                                     style={FormularioStyles.inputArredondado}
                                     onValueChange={(itemValue, itemIndex) =>
-                                        this.setState({ language: itemValue })
+                                        this.setState({ tema: itemValue })
                                     }>
                                     <Picker.Item label="Java" value="java" />
                                     <Picker.Item label="JavaScript" value="js" />

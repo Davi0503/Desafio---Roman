@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import jwt from 'jwt-decode';
+
 import {
     StyleSheet,
     View,
@@ -6,11 +8,11 @@ import {
     ImageBackground,
     TextInput,
     TouchableOpacity,
-    AsyncStorage
+    AsyncStorage,
+    Alert
 } from "react-native";
 import api from '../services/api.js';
 import {DefaultStyles,FeedBackStyles, FormularioStyles} from '../assets/estilizacao/padrao.js';
-
 
 
 class Login extends Component {
@@ -23,19 +25,25 @@ class Login extends Component {
         this.state = { email: "", senha: "" };
     }
 
-
-
     _logando = async () => {
-
+        // var jwt = require("jwt-decode");
+        
         const respostaLogin = await api.post("/api/Usuarios/login", {
-            email: this.state.email.toLocaleLowerCase(),
+            email: this.state.email,
             senha: this.state.senha
         })
 
         const token = respostaLogin.data.token;
         await AsyncStorage.setItem('userToken', token);
-        this.props.navigation.navigate("MainNavigator");
 
+        //Alert.alert(token);
+        var decode = jwt(token).Role;
+        //console.warn(decode);
+            if (decode.Role === "Administrador") {
+                this.props.navigation.navigate("AdminNavigator");
+            }
+
+        this.props.navigation.navigate("MainNavigator");
     }
 
 
