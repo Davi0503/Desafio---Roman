@@ -6,15 +6,30 @@ import {
 } from "react-navigation";
 
 import Login from "./pages/login"
-import Main from "./pages/main"
-import Temas from "./pages/temas"
+//import Temas from "./pages/temas/listarTemas"
+//import Projetos from "./pages/projetos/listarProjetos"
+import Temas from "./pages/temas/cadastrarTemas"
+import Projetos from "./pages/projetos/cadastrarProjetos"
 
 const AuthStack = createStackNavigator({ Login });
 
 const MainNavigator = createBottomTabNavigator(
     {
-        Main,
-        Temas
+        Projetos:Projetos,
+        Temas:Temas
+    },{
+        swipeEnabled:true,
+        tabBarOptions:{
+            activeBackgroundColor:'#3380e7',
+            activeTintColor:'white',
+            allowFontScaling:true,
+            labelStyle:{
+                fontSize:20,
+                marginBottom:10
+            },
+            showIcon:false
+            
+        }
     }
 )
 export default createAppContainer(
@@ -24,7 +39,8 @@ export default createAppContainer(
             AuthStack
         },
         {
-            initialRouteName: "AuthStack"
+            //initialRouteName: "AuthStack"
+            initialRouteName: "MainNavigator" //para testes
         }
     )
 );

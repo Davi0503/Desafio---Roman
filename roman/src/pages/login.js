@@ -3,14 +3,13 @@ import {
     StyleSheet,
     View,
     Text,
-    Image,
     ImageBackground,
     TextInput,
     TouchableOpacity,
-    AsyncStorage,
-    ScrollView
+    AsyncStorage
 } from "react-native";
 import api from '../services/api.js';
+import {DefaultStyles,FeedBackStyles, FormularioStyles} from '../assets/estilizacao/padrao.js';
 
 
 
@@ -29,7 +28,7 @@ class Login extends Component {
     _logando = async () => {
 
         const respostaLogin = await api.post("/api/Usuarios/login", {
-            email: this.state.email,
+            email: this.state.email.toLocaleLowerCase(),
             senha: this.state.senha
         })
 
@@ -48,31 +47,40 @@ class Login extends Component {
                 {/* </View> */}
 
                 <ImageBackground source={require("../assets/img/160.jpg")} style={styles.backgroundImage}>
-                    <View style={styles.mainContainer}>
-
+                    <View style={FormularioStyles.mainContainer}>
+                        <View style={FormularioStyles.corpo}>
                         <View>
-                            <Text>Login</Text>
+                            <Text style={DefaultStyles.tituloPagina}>Login</Text>
                         </View>
                         <View>
-                            <Text>Email:</Text>
+                            <Text style={FormularioStyles.labelInput}>Email:</Text>
                             <TextInput
                                 placeholder="email"
                                 textContentType='emailAddress'
+                                style={FormularioStyles.inputArredondado}
                                 onChangeText={email => this.setState({ email })}
+                                placeholderTextColor='black'
                             />
-                            <Text>Senha:</Text>
+                            <Text style={FormularioStyles.labelInput}>Senha:</Text>
                             <TextInput
                                 placeholder="senha"
                                 textContentType='password'
+                                style={FormularioStyles.inputArredondado}
                                 onChangeText={senha => this.setState({ senha })}
+                                placeholderTextColor='black'
                             />
 
                             <TouchableOpacity
                                 onPress={this._logando}
+                                style={{...FormularioStyles.inputArredondado,...FormularioStyles.botaoSubmit}}
+                                activeOpacity={0.5}
                             >
-                                <Text>Login</Text>
+                                <Text style={FormularioStyles.textoBotaoSubmit}>Login</Text>
                             </TouchableOpacity>
+
+                            <Text style={FeedBackStyles.mensagemErro}>Mensagem erro</Text>
                         </View>
+                    </View>
                     </View>
 
                 </ImageBackground>
@@ -85,22 +93,16 @@ class Login extends Component {
 
 const styles = StyleSheet.create({
     main: {
+        width:'100%',
+        alignSelf:'flex-start',
         padding: 0,
         margin: 0,
         display:"flex"
     },
-    mainContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000',
-        
-    },
     backgroundImage: {
-        width: "100%", height: 650, resizeMode: 'cover'
-
+        width: "100%", 
+        height: '100%', 
     }
-
 })
 
 export default Login
