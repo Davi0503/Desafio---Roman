@@ -1,21 +1,35 @@
 import React, { Component } from "react"
-import { View, Text , FlatList} from "react-native"
+import { View, Text , FlatList, AsyncStorage} from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import {DefaultStyles , FlatListStyles,FormularioStyles} from '../../assets/estilizacao/padrao.js';
+import api from "../../services/api.js";
+
 
 class Temas extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            listatemas: [
-                {
-                    id: '1',
-                    nome: "Um tema",
-                    ativo: 'true'
-                }
-            ]
+            listatemas: []
         }
 
+    }
+
+    _buscarTemas = async () =>{
+        //console.warn(AsyncStorage.getItem("userToken"));
+        const token = await AsyncStorage.getItem("userToken");
+        const Resultado = await api.get("/api/Temas/listar/ativos",
+        { 
+            headers: { 
+                Authorization: "Bearer " + token
+            } 
+        }
+        )
+        //console.warn(respostaLogin.data);
+        this.setState({listatemas : Resultado.data})
+    }
+
+    componentDidMount(){
+        this._buscarTemas()
     }
 
 
@@ -28,7 +42,7 @@ class Temas extends Component {
                 <View>
                     <TouchableOpacity
                         style={{...FormularioStyles.inputArredondado,width:"14%",margin:15,padding:0}}
-                        onPress={() => this.props.navigation.navigate("MainNavigator")}
+                        onPress={()=>this.props.navigation.navigate("CadastrarTemas")}
                     >
                         <Text style={FormularioStyles.textoBotaoSubmit}>+</Text>
                     </TouchableOpacity>
@@ -50,7 +64,7 @@ class Temas extends Component {
                 <Text>{item.nome}</Text>
                 <Text>{item.ativo?"ativo":"inativo"}</Text>
                 <TouchableOpacity>
-                    <Text>Atualizar</Text>
+                    <Text style={FlatListStyles.ItemLink}>Atualizar</Text>
                 </TouchableOpacity>
         </View>
     )

@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import { View, Text, FlatList,StyleSheet } from "react-native"
+import { View, Text, FlatList,AsyncStorage } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import {DefaultStyles , FlatListStyles,FormularioStyles} from '../../assets/estilizacao/padrao.js';
+import api from "../../services/api.js";
 
 class Projetos extends Component {
     constructor(props) {
@@ -9,18 +10,31 @@ class Projetos extends Component {
         this.state = {
             listaprojetos: [
                 {
-                    id: '1',
-                    nome: "Um projeto",
-                    tema: {
-                        id: '1',
-                        nome: 'Tema'
-                    },
-                    ativo: 'true'
+                    idtemaNavigation:[]
                 }
             ]
         }
 
     }
+
+    _buscarProjetos = async () =>{
+        //console.warn(AsyncStorage.getItem("userToken"));
+        const token = await AsyncStorage.getItem("userToken");
+        const Resultado = await api.get("/api/Projetos/listar/ativos",
+        { 
+            headers: { 
+                Authorization: "Bearer " + token
+            } 
+        }
+        )
+        //console.warn(respostaLogin.data);
+        this.setState({listaprojetos : Resultado.data})
+    }
+
+    componentDidMount(){
+        this._buscarProjetos()
+    }
+
 
 
     render() {
@@ -55,10 +69,10 @@ class Projetos extends Component {
                 <Text>{item.nome}</Text>
             </View>
             <View>
-                <Text>{item.tema.nome}</Text>
+                <Text>{item.idtemaNavigation.nome}</Text>
                 <Text>{item.ativo?"ativo":"inativo"}</Text>
                 <TouchableOpacity>
-                    <Text>Atualizar</Text>
+                    <Text style={FlatListStyles.ItemLink}>Atualizar</Text>
                 </TouchableOpacity>
             </View>
         </View>

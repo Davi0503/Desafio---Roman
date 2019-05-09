@@ -82,9 +82,13 @@ export const FeedBackStyles = StyleSheet.create({
 
 export const FlatListStyles = StyleSheet.create({
     Main: {
-        backgroundColor: 'white',
         width: '90%',
         alignSelf: 'center',
+    },
+    Corpo: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: 'white',
         padding: 15,
         marginVertical: 5,
         shadowOffset: {
@@ -94,11 +98,10 @@ export const FlatListStyles = StyleSheet.create({
         shadowRadius: 12,
         elevation: 12
     },
-    Corpo: {
-        flex: 1,
-        flexDirection: 'row'
-    },
     Item: {
         width: '80%'
+    },
+    ItemLink:{
+        textDecorationLine:'underline'
     }
 });
