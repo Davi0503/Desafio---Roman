@@ -10,7 +10,7 @@ class Temas extends Component {
             listatemas: [
                 {
                     id: '1',
-                    nome: "Um projeto",
+                    nome: "Um tema",
                     ativo: 'true'
                 }
             ]

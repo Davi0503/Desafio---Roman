@@ -10,7 +10,7 @@ class Projetos extends Component {
             listaprojetos: [
                 {
                     id: '1',
-                    nome: "Um tema",
+                    nome: "Um projeto",
                     tema: {
                         id: '1',
                         nome: 'Tema'

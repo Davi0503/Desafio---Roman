@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
+import React, {Component} from 'react'
+
+import {StyleSheet,
     View,
     Text,
     ImageBackground,
     TextInput,
     TouchableOpacity,
     AsyncStorage,
-    Picker
-} from "react-native";
-import api from '../../services/api.js';
+    Picker} from 'react-native'
+
 import { DefaultStyles, FeedBackStyles, FormularioStyles } from '../../assets/estilizacao/padrao.js';
 
-
-class Projetos extends Component {
+class Temas extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -22,35 +20,23 @@ class Projetos extends Component {
         };
     }
 
-
-    render() {
-        return (
-
+    render(){
+        return(
             <View style={DefaultStyles.fundoPadrao}>
                     <View style={FormularioStyles.mainContainer}>
                         <View style={FormularioStyles.corpo}>
                             <View>
-                                <Text style={{...DefaultStyles.tituloPagina,marginTop:0}}>Cadastro de Projeto</Text>
+                                <Text style={DefaultStyles.tituloPagina}>Alteração de Tema</Text>
                             </View>
                             <View>
                                 <Text style={FormularioStyles.labelInput}>Nome:</Text>
                                 <TextInput
-                                    placeholder="Nome do projeto"
+                                    placeholder="Nome do tema"
                                     textContentType='name'
                                     style={FormularioStyles.inputArredondado}
                                     onChangeText={email => this.setState({ email })}
                                     placeholderTextColor='black'
                                 />
-                                <Text style={FormularioStyles.labelInput}>Tema:</Text>
-                                <Picker
-                                    selectedValue={this.state.language}
-                                    style={FormularioStyles.inputArredondado}
-                                    onValueChange={(itemValue, itemIndex) =>
-                                        this.setState({ language: itemValue })
-                                    }>
-                                    <Picker.Item label="Java" value="java" />
-                                    <Picker.Item label="JavaScript" value="js" />
-                                </Picker>
 
                                 <TouchableOpacity
                                     onPress={this._logando}
@@ -71,4 +57,4 @@ class Projetos extends Component {
 
 }
 
-export default Projetos
+export default Temas 

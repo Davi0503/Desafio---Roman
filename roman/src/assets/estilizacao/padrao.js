@@ -30,6 +30,14 @@ export const FormularioStyles = StyleSheet.create({
             paddingVertical: 15,
             backgroundColor: 'white'
         },
+        inputPicker: {
+            borderRadius: 100,
+            paddingHorizontal: 20,
+            paddingVertical: 15,
+            backgroundColor: 'white',
+            width: "70%",
+            marginLeft: 15
+        },
         labelInput: {
             fontWeight: '500',
             marginVertical: 20,

@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
+import React, {Component} from 'react'
+
+import {StyleSheet,
     View,
     Text,
     ImageBackground,
     TextInput,
     TouchableOpacity,
     AsyncStorage,
-    Picker
-} from "react-native";
-import api from '../../services/api.js';
+    Picker} from 'react-native'
+
 import { DefaultStyles, FeedBackStyles, FormularioStyles } from '../../assets/estilizacao/padrao.js';
 
-
-class Projetos extends Component {
+class Projeto extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -22,15 +20,13 @@ class Projetos extends Component {
         };
     }
 
-
-    render() {
-        return (
-
+    render(){
+        return(
             <View style={DefaultStyles.fundoPadrao}>
                     <View style={FormularioStyles.mainContainer}>
                         <View style={FormularioStyles.corpo}>
                             <View>
-                                <Text style={{...DefaultStyles.tituloPagina,marginTop:0}}>Cadastro de Projeto</Text>
+                                <Text style={{...DefaultStyles.tituloPagina,marginTop:0}}>Alteração de Projeto</Text>
                             </View>
                             <View>
                                 <Text style={FormularioStyles.labelInput}>Nome:</Text>
@@ -71,4 +67,4 @@ class Projetos extends Component {
 
 }
 
-export default Projetos
+export default Projeto 

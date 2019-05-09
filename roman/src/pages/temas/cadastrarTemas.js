@@ -37,20 +37,19 @@ class Temas extends Component {
                             <View>
                                 <Text style={FormularioStyles.labelInput}>Nome:</Text>
                                 <TextInput
-                                    placeholder="Nome do projeto"
+                                    placeholder="Nome do tema"
                                     textContentType='name'
                                     style={FormularioStyles.inputArredondado}
                                     onChangeText={email => this.setState({ email })}
                                     placeholderTextColor='black'
                                 />
-                                <Text style={FormularioStyles.labelInput}>Tema:</Text>
 
                                 <TouchableOpacity
                                     onPress={this._logando}
                                     style={{ ...FormularioStyles.inputArredondado, ...FormularioStyles.botaoSubmit }}
                                     activeOpacity={0.5}
                                 >
-                                    <Text style={FormularioStyles.textoBotaoSubmit}>Login</Text>
+                                    <Text style={FormularioStyles.textoBotaoSubmit}>Enviar</Text>
                                 </TouchableOpacity>
 
                                 <Text style={FeedBackStyles.mensagemErro}>Mensagem erro</Text>
