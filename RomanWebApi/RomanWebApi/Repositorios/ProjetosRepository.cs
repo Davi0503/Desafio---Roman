@@ -30,13 +30,13 @@ namespace RomanWebApi.Repositorios {
             }
         }
 
-        /// <summary>
+               /// <summary>
         /// Lista todos os Projetos do banco de dados
         /// </summary>
         /// <returns>Retorna uma lista com todos os Projetos do banco de dados</returns>
         public List<Projetos> Listar() {
             using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
-                return romanContext.Projetos.ToList();
+                return romanContext.Projetos.Include(i => i.IdtemaNavigation).ToList();
             }
         }
 
@@ -46,7 +46,7 @@ namespace RomanWebApi.Repositorios {
         /// <returns>Retorna uma lista com todos os Projetos que estão ativos do banco de dados</returns>
         public List<Projetos> ListarAtivos() {
             using (DesafioRomanContext romanContext = new DesafioRomanContext()) {
-                return romanContext.Projetos.Where(i => i.Ativo).ToList();
+                return romanContext.Projetos.Include(i => i.IdtemaNavigation).Where(i => i.Ativo).ToList();
             }
         }
     }
