@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using RomanWebApi.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using RomanWebApi.Models;
 
 namespace RomanWebApi.Repositorios {
