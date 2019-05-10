@@ -3,7 +3,7 @@ import { View, Text , FlatList, AsyncStorage} from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import {DefaultStyles , FlatListStyles,FormularioStyles} from '../../assets/estilizacao/padrao.js';
 import api from "../../services/api.js";
-
+import { TokenValido } from "../../services/auth.js";
 
 class Temas extends Component {
     constructor(props) {
@@ -29,7 +29,11 @@ class Temas extends Component {
     }
 
     componentDidMount(){
-        this._buscarTemas()
+        if(TokenValido()){
+            this._buscarTemas()
+        }else{
+            this.props.navigation.navigate("AuthStack");
+        }
     }
 
 

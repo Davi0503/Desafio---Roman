@@ -12,8 +12,8 @@ import Professores from "./pages/professores/listarProfessores"
 
 import { AsyncStorage } from 'react-native'
 
-// import Temas from "./pages/temas/cadastrarTemas"
-// import Projetos from "./pages/projetos/cadastrarProjetos"
+import CadastrarTemas from "./pages/temas/cadastrarTemas"
+import CadastrarProjetos from "./pages/projetos/cadastrarProjetos"
 
 // import Temas from "./pages/temas/alteraTemas"
 // import Projetos from "./pages/projetos/alteraProjeto"
@@ -71,12 +71,20 @@ const AuthStack = createStackNavigator(
     }
 );
 
+const CadastroStack = createStackNavigator(
+    { 
+        CadastrarProjetos,
+        CadastrarTemas
+    }
+);
+
 export default createAppContainer(
     createSwitchNavigator(
         {
             AuthStack,
             MainNavigator,
-            AdminNavigator
+            AdminNavigator,
+            CadastroStack
         },
         {
             initialRouteName: "AuthStack"

@@ -3,6 +3,7 @@ import { View, Text, FlatList,AsyncStorage } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler";
 import {DefaultStyles , FlatListStyles,FormularioStyles} from '../../assets/estilizacao/padrao.js';
 import api from "../../services/api.js";
+import { TokenValido } from "../../services/auth.js";
 
 class Projetos extends Component {
     constructor(props) {
@@ -32,10 +33,17 @@ class Projetos extends Component {
     }
 
     componentDidMount(){
-        this._buscarProjetos()
+        TokenValido().then(
+            valido => {
+                if (!valido) {
+                    this.props.navigation.navigate("AuthStack");
+                }else{
+                    this._buscarProjetos();
+                }
+            }
+        )
+
     }
-
-
 
     render() {
         return (
@@ -46,7 +54,7 @@ class Projetos extends Component {
                 <View>
                     <TouchableOpacity
                         style={{...FormularioStyles.inputArredondado,width:"14%",margin:15,padding:0}}
-                        onPress={() => this.props.navigation.navigate("MainNavigator")}
+                        onPress={() => this.props.navigation.navigate("CadastroStack")}
                     >
                         <Text style={FormularioStyles.textoBotaoSubmit}>+</Text>
                     </TouchableOpacity>

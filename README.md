@@ -233,11 +233,13 @@ Para iniciar a aplicação será necessario 3 ~~pequenos~~ passos demorados para
 * Baixe o [node.js](https://nodejs.org/en/) e Instale-o  
 * Abra o prompt de comando na pasta do projeto e digite o comando :  
 **npm install --save react-native-cli**  
-* Após a instalação do modulos do React-Native, você vai precisar de mais 2 bibliotecas. Aqui está o comando para cada uma delas:  
+* Após a instalação do modulos do React-Native, você vai precisar de mais 3 bibliotecas. Aqui está o comando para cada uma delas:  
 **npm install --save react-native-gesture-handler** 
 (biblioteca usada para reconhecer deslizes e outras interações com a tela)  
 **npm install --save react-native-navigation** 
 (biblioteca usada para facilitar a navegação entre telas)  
+**npm install --save jwt-decode** 
+(biblioteca usada para converter tokens para objeto)  
 * Digite **react-native run-android** e veja... Nada vai acontecer porque você precisará executar o proximo passo (então feche o prompt de comando por agora)  
 
 #### Java SDK e Variaveis de ambiente  

@@ -14,6 +14,7 @@ import {
 
 import { DefaultStyles, FeedBackStyles, FormularioStyles } from '../assets/estilizacao/padrao.js';
 import api from '../services/api.js';
+import {TokenValido} from '../services/auth.js';
 
 
 class Login extends Component {
@@ -27,7 +28,19 @@ class Login extends Component {
             email: "", senha: "",
             erro: ""
         };
-        console.disableYellowBox = false;
+        console.disableYellowBox = true;
+    }
+
+    componentDidMount(){
+        TokenValido().then(
+            valido => {
+                if (valido) {
+                    this.props.navigation.navigate("MainNavigator");
+                }
+            }
+        )
+        
+
     }
 
     _logando = async () => {
@@ -51,8 +64,6 @@ class Login extends Component {
         } catch{
             this.setState({ erro: respostaLogin.data.Usuario })
         }
-
-
 
     }
 
