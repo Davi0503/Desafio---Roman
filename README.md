@@ -276,22 +276,22 @@ As telas criadas estão todas na pasta [Modelo Adobe XD](https://github.com/Davi
 ![Tela Prototipação](https://raw.githubusercontent.com/Davi0503/Senai-Roman-Desafio-TipoFront/master/Modelo%20Adobe%20XD/Login.png)
 >  
 
-Vimos que algumas paginas poderiam ser reaproveitadas (as de cadastro e alteração) então fizemos ambas serem a mesma (apenas com a diferença de que as de cadastro irão se iniciar sem valores e a de alterar receberão valores).  
+**O Conteudo abaixo não foi adcionado na versão final**  
+O Navigator será diferente para um administrador (enquanto dos professores terá somente 2 botões (Temas e projetos), o do administrador terá 3 (Professores,Temas e projetos))  
+> Tela de listagem de professores (tela incompleta)  
+![Tela Prototipação](https://github.com/Davi0503/Senai-Roman-Desafio-TipoFront/blob/master/Modelo%20Adobe%20XD/Listar%20Professores.png?raw=true)
+  
+Vimos que algumas paginas poderiam ser reaproveitadas (as de cadastro e alteração) então pensamos em ambas serem a mesma (apenas com a diferença de que as de cadastro iriam se iniciar sem valores e a de alterar receberão valores).  
 > Tela cadastro/alteração temas 
 ![Tela Prototipação](https://raw.githubusercontent.com/Davi0503/Senai-Roman-Desafio-TipoFront/master/Modelo%20Adobe%20XD/Cadastra-Altera%20Temas.png)
   
 > Tela de listagem de temas (sem as informações preenchidas)  
-![Tela Prototipação](https://raw.githubusercontent.com/Davi0503/Senai-Roman-Desafio-TipoFront/master/Modelo%20Adobe%20XD/Listar%20Temas.png)
->
-
-O Navigator será diferente para um administrador (enquanto dos professores terá somente 2 botões (Temas e projetos), o do administrador terá 3 (Professores,Temas e projetos))  
-> Tela de listagem de professores (somente administradores podem acessa-la )  
-![Tela Prototipação](https://raw.githubusercontent.com/Davi0503/Senai-Roman-Desafio-TipoFront/master/Modelo%20Adobe%20XD/Listar%20Professores.png)
+![Tela Prototipação](https://github.com/Davi0503/Senai-Roman-Desafio-TipoFront/blob/master/Modelo%20Adobe%20XD/Listar%20Temas.png?raw=true)
 
 ### Telas  
 O Projeto ~~tem no total~~ deveria ter 6 telas sendo elas a de login (principal), cadastro e alteração de Temas e Projetos e a tela de listagem de Professores.  
 Todas as outras telas só são acessiveis após o usuario fazer o login .  
-![Fluxograma Telas]()
+![Fluxograma Telas](https://github.com/Davi0503/Senai-Roman-Desafio-TipoFront/blob/master/Fluxogramas/Fluxograma-Page-2.png)
 
 ### Telas finalizadas (completamente)  
 - [x] Login  
