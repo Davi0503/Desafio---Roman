@@ -287,6 +287,15 @@ O Navigator será diferente para um administrador (enquanto dos professores ter�
 ![Tela Prototipação](https://raw.githubusercontent.com/Davi0503/Senai-Roman-Desafio-TipoFront/master/Modelo%20Adobe%20XD/Listar%20Professores.png)
 
 ### Telas  
-O Projeto tem no total 6 telas sendo elas a de login (principal), cadastro e alteração de Temas e Projetos e a tela de listagem de Professores.  
+O Projeto ~~tem no total~~ deveria ter 6 telas sendo elas a de login (principal), cadastro e alteração de Temas e Projetos e a tela de listagem de Professores.  
 Todas as outras telas só são acessiveis após o usuario fazer o login .  
 ![Fluxograma Telas]()
+
+### Telas finalizadas (completamente)  
+- [x] Login  
+- [x] Listar Temas  
+- [x] Listar Projetos  
+- [ ] Cadastro/Alteração Projetos  
+- [ ] Cadastro/Alteração Temas  
+- [ ] Listar Professores  
+
